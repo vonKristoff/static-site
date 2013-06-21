@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		      paths: [ 'styles' ]
 		    },
 		    files: {
-		      'css/style.css': 'css/*.styl'
+		      'css/style.css': 'css/style.styl'
 		    }
 		  }
 		},
@@ -21,7 +21,8 @@ module.exports = function(grunt) {
 		// watch and perform task on change
 		watch: {
 		  files: 'css/*.styl',
-		  tasks: 'stylus'
+		  tasks: 'stylus',
+		  options:{ livereload: true }
 		}
 
 	});
