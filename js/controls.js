@@ -28,4 +28,27 @@
     $('.mCustomScrollBox').css('max-width','150%');
     }, 1500);
 
+    var max = $(window).height(), 
+        over = false;
+
+
+    window.addEventListener('mousemove',function(e){
+    
+        if(!over){
+            if(e.y > max - 150){
+              over = true;
+            }
+        }else{
+            if(e.y < max - 250){
+              over = false;
+              $('.footer').css('bottom','-150px');
+            }
+        }
+    
+    },false);
+
+    $('.nfo').on('click',function(){
+        $('.footer').css('bottom','0px');
+    })
+
 })(jQuery);

@@ -11,6 +11,20 @@
   </div>
 </div>
 <div id="disqus_thread"></div>
+<ul><li title='info' class='nfo buttons'></li></ul>
+<div class="footer">
+    <div class="desc">
+        <p><?= $description ?></p>
+        <div class="option">
+            <ul>
+                <li class='info'>BIRD ( twitter )</li>
+                <li class='info'>SPEECH ( comments )</li>
+                <li class='info'>TRIANGLE ( usage )</li>
+                <li class='info'>HEAD ( download )</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = '<?= $disqus ?>'; // required: replace example with your forum shortname
