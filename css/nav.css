@@ -10,8 +10,8 @@ background-image:radial-gradient(rgba(150,180,110,.85),rgba(175,220,130,.05));
   background-size: cover;
 }
 
-li.buttons {
-  margin: 10px;
+li {
+  
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -21,27 +21,32 @@ li.buttons {
   -ms-transition: all .3s;
   transition: all .3s; }
 
-li.buttons:hover {
+li:hover {
   cursor: pointer;
   border-radius: 50%;
   background-color: #ace; }
 
 .github {
+  margin: 10px;
   background: url("../img/git.png") no-repeat center center;
   -webkit-background-size: cover;
   float: right; }
 
 .twitter {
+  margin: 10px;
   background: url("../img/bird.png") no-repeat center center;
   -webkit-background-size: cover;
   float: left; }
   .discuss {
+    margin: 10px;
   background: url("../img/talk.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   float: left; }
 .nfo {
+  margin-top:10px;
+  margin-bottom: 10px;
   background: url("../img/nfo.png") no-repeat center center;
   -webkit-background-size: cover;
   position:fixed;
@@ -55,6 +60,8 @@ li.buttons:hover {
   font-size: .7em;
 }
 .usage {
+  margin-top:10px;
+  margin-bottom: 10px;
   color:transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;

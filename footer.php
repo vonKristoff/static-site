@@ -11,7 +11,7 @@
   </div>
 </div>
 <div id="disqus_thread"></div>
-<ul><li title='info' class='nfo buttons'></li></ul>
+<ul><li title='info' class='nfo'></li></ul>
 <div class="footer">
     <div class="desc">
         <p><?= $description ?></p>

@@ -14,10 +14,10 @@
 <body>
 <nav>
   <ul>
-    <a href="http://twitter.com/vonKristoff"><li title='twitter' class='twitter buttons'></li></a>
-    <a href="http://github.com/vonKristoff/<?= $repro ?>"><li title='download' class='github buttons'></li></a>
-    <li title='comments' class='discuss buttons'></li>
-    <li title='usage' class='usage buttons'><div class="arrow"></div></li>
+    <a href="http://twitter.com/vonKristoff"><li title='twitter' class='twitter'></li></a>
+    <a href="http://github.com/vonKristoff/<?= $repro ?>"><li title='download' class='github'></li></a>
+    <li title='comments' class='discuss'></li>
+    <li title='usage' class='usage'><div class="arrow"></div></li>
   </ul>
 </nav>
 
