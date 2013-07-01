@@ -1,5 +1,5 @@
-<? include 'header.php' ?>
+<?php include 'header.php' ?>
 <!-- #content -->
 
 
-<? include 'footer.php' ?>
+<?php include 'footer.php' ?>

@@ -1,7 +1,7 @@
 </div> <!-- end of content -->
 <div class="how">
   <div class="reveal">
-  <pre><code class="language-javascript"><?= $usage ?></code></pre>  
+  <pre><code class="language-javascript"><?php echo $usage ?></code></pre>  
   </div>
 </div>
 <div class="talk">
@@ -14,7 +14,7 @@
 <ul><li title='info' class='nfo'></li></ul>
 <div class="footer">
     <div class="desc">
-        <p><?= $description ?></p>
+        <p><?php echo $description ?></p>
         <div class="option">
             <ul>
                 <li class='info'>BIRD ( twitter )</li>
@@ -27,7 +27,7 @@
 </div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = '<?= $disqus ?>'; // required: replace example with your forum shortname
+var disqus_shortname = '<?php echo $disqus ?>'; // required: replace example with your forum shortname
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {

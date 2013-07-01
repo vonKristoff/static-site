@@ -3,29 +3,45 @@ module.exports = function(grunt) {
 	// load modules for use
 	grunt.loadNpmTasks('grunt-contrib-stylus');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.initConfig({
-		
+		pkg     : grunt.file.readJSON('package.json'),
 		stylus: {
-		  dist: {
-		    options: {
-		      compress: true,
-		      paths: [ 'styles' ]
-		    },
-		    files: {
-		      'css/style.css': 'css/style.styl'
-		    }
-		  }
+			dist: {
+				options: {
+					compress: true,
+					paths: [ 'styles' ]
+				},
+				files: {
+					'css/style.css': 'css/style.styl'
+				}
+			}
 		},
-
-		// watch and perform task on change
+		uglify: {
+     		files: {
+        		src: 'js/<%= pkg.name %>.js',
+        		dest: 'js/<%= pkg.name %>.min.js'
+      		}
+    	}
 		watch: {
-		  files: 'css/*.styl',
-		  tasks: 'stylus',
-		  options:{ livereload: true }
+			css:{
+				files: 'css/*.styl',
+				tasks: 'stylus',
+		  		options:{ livereload: true }
+			},
+		  	scripts:{
+				files: ['js/*.js','*.php'],
+				options:{ livereload: true }
+			},
+  			scripts: {
+  				options: { nospawn: true },
+    			files: ['js/<%= pkg.name %>.js'],
+    			tasks: ['uglify']
+  			}
 		}
 
 	});
 
-	grunt.registerTask('default', ['stylus','watch']);
+	grunt.registerTask('default', ['stylus','watch','uglify']);
 }
