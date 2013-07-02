@@ -39,7 +39,7 @@ var disqus_shortname = '<?php echo $disqus ?>'; // required: replace example wit
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/prism.js" data-default-language="markup"></script>
-<script src="js/jumble.js"></script>
+<script src="js/<?php echo $repro ?>.js"></script>
 <script src="js/mousewheel.min.js"></script>
 <script src="js/scrollbar.min.js"></script>
 <script src="js/controls.js"></script>
