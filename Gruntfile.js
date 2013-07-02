@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         		src: 'js/<%= pkg.name %>.js',
         		dest: 'js/<%= pkg.name %>.min.js'
       		}
-    	}
+    	},
 		watch: {
 			css:{
 				files: 'css/*.styl',
