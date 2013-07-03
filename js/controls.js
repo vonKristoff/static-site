@@ -39,7 +39,7 @@
               over = true;
             }
         }else{
-            if(e.y < max - 250){
+            if(e.y < max - 300){
               over = false;
               $('.footer').css('bottom','-150px');
             }

@@ -15,6 +15,9 @@
 <div class="footer">
     <div class="desc">
         <p><?php echo $description ?></p>
+        <a href="https://twitter.com/share" class="twitter-share-button twitbot" data-url="http://bite-software.co.uk/<?php echo $repro ?>" data-text="<?php echo $title ?> Check out this site" data-via="vonKristoff">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <p>This shiv is <span class="star">FREE</span> - so if u like it - pls leave a <span class="star">comment</span> or <span class="star">star</span> my github repro etc.</p>
         <div class="option">
             <ul>
                 <li class='info'>BIRD ( twitter )</li>
