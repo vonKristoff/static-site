@@ -9,14 +9,14 @@ module.exports = function(grunt) {
 		pkg     : grunt.file.readJSON('package.json'),
 		stylus: {
 			dist: {
-				options: {
-					compress: true,
-					paths: [ 'styles' ]
-				},
-				files: {
-					'css/style.css': 'css/style.styl'
-				}
-			}
+		    	options: {
+		      		compress: true,
+		      		paths: [ 'styles' ]
+		    	},
+			    files: {
+			    	'css/style.css': 'css/style.styl'
+		    	}
+		  	}
 		},
 		uglify: {
      		files: {
@@ -28,9 +28,9 @@ module.exports = function(grunt) {
 			css:{
 				files: 'css/*.styl',
 				tasks: 'stylus',
-		  		options:{ livereload: true }
+				options:{ livereload: true }
 			},
-		  	scripts:{
+			js:{
 				files: ['js/*.js','*.php'],
 				options:{ livereload: true }
 			},
@@ -39,9 +39,8 @@ module.exports = function(grunt) {
     			files: ['js/<%= pkg.name %>.js'],
     			tasks: ['uglify']
   			}
-		}
+		}	
 
 	});
-
 	grunt.registerTask('default', ['stylus','watch','uglify']);
 }
