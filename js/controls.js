@@ -35,11 +35,11 @@
     window.addEventListener('mousemove',function(e){
     
         if(!over){
-            if(e.y > max - 150){
+            if(e.clientY > max - 150){
               over = true;
             }
         }else{
-            if(e.y < max - 300){
+            if(e.clientY < max - 300){
               over = false;
               $('.footer').css('bottom','-150px');
             }
