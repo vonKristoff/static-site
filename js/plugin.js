@@ -10,21 +10,23 @@
 */
 (function($) {
 
-$.fn.program_name = function(){
+$.fn.program_name = function(options){
 	
 	var el = $(this),
 		mobile = isMobile.any(),	
 	
-		process = new Plugin(me,rgb,rgb2,brightness,satuation);
+		process = new Plugin(me,options);
 
 	window.addEventListener( 'resize', process.resize, false );
 			
 	return this.el;	
 }
 
-var Plugin = function(me){
+var Plugin = function(me,opt){
 
 	this.el = me;
+	this.something = opt.value;
+	
 	this.init();
 }
 
