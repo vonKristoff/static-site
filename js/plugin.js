@@ -15,7 +15,9 @@ $.fn.program_name = function(){
 	var el = $(this),
 		mobile = isMobile.any(),	
 	
-		process = new Plugin(me,rgb,rgb2,brightness,satuation);	
+		process = new Plugin(me,rgb,rgb2,brightness,satuation);
+
+	window.addEventListener( 'resize', process.resize, false );
 			
 	return this.el;	
 }
@@ -31,7 +33,11 @@ Plugin.prototype.init = function(){
 	
 
 }
+Plugin.prototype.resize = function(){
 
+	
+
+}
 
 
 Plugin.prototype.hsl = function(rgb){
