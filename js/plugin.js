@@ -22,25 +22,27 @@ $.fn.program_name = function(options){
 	return this.el;	
 }
 
-var Plugin = function(me,opt){
+var Plugin = function(me,options){
+
+	var config = {	
+		effect: 'slideToggle',
+		speed: 500 
+	}
+	$.extend(config,options);
 
 	this.el = me;
-	this.something = opt.value;
+	this.something = config.value;
 	
 	this.init();
 }
 
 Plugin.prototype.init = function(){
 
-	
-
 }
+
 Plugin.prototype.resize = function(){
 
-	
-
 }
-
 
 Plugin.prototype.hsl = function(rgb){
 
