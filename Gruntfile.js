@@ -22,8 +22,9 @@ module.exports = function(grunt) {
 		copy: {
   			main: {
 		    	files: [{
-		    		src: ['js/<%= pkg.name %>.js'], 
-		    		dest: 'distribution/'
+		    		src: 'js/<%= pkg.name %>.js', 
+		    		dest: 'distribution/<%= pkg.name %>.js',
+		    		filter: 'isFile'
 		    	}]	
 			}
 		},
