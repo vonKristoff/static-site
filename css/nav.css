@@ -9,7 +9,10 @@ background-image:radial-gradient(rgba(150,180,110,.85),rgba(175,220,130,.05));
   -o-background-size: cover;
   background-size: cover;
 }
-
+nav{
+  position:fixed;
+  top:0px;
+}
 li {
   
   width: 50px;

@@ -6,13 +6,13 @@ html
   background $hardbg
   height 100%
   overflow hidden
-  background-image radial-gradient(rgba($gradient1,.25),rgba($gradient2,.05))
-  background -webkit-radial-gradient(circle, rgba($gradient1,.25), rgba($gradient2,.05)) $hardbg
-  background-image -moz-radial-gradient(50% 50%,circle,rgba($gradient1,.25) 50%,rgba($gradient2,.05) 100%)
+  background-image radial-gradient($gradient1,$gradient2)
+  background -webkit-radial-gradient(circle, $gradient1, $gradient2) $hardbg
+  background-image -moz-radial-gradient(50% 50%,circle,$gradient1 50%,$gradient2 100%)
   background-size cover
   
 nav 
-  fixed 100%
+  fixed top 100%
 
 .star
   color rgb(156,255,0)

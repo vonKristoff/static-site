@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-stylus');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.initConfig({
 		pkg     : grunt.file.readJSON('package.json'),
@@ -18,10 +19,18 @@ module.exports = function(grunt) {
 		    	}
 		  	}
 		},
+		copy: {
+  			main: {
+		    	files: [{
+		    		src: ['js/<%= pkg.name %>.js'], 
+		    		dest: 'distribution/'
+		    	}]	
+			}
+		},
 		uglify: {
      		files: {
         		src: 'js/<%= pkg.name %>.js',
-        		dest: 'js/<%= pkg.name %>.min.js'
+        		dest: 'distribution/<%= pkg.name %>.min.js'
       		}
     	},
 		watch: {
@@ -32,15 +41,11 @@ module.exports = function(grunt) {
 			},
 			js:{
 				files: ['js/*.js','*.php'],
+				tasks: ['copy','uglify'],
 				options:{ livereload: true }
-			},
-  			scripts: {
-  				options: { nospawn: true },
-    			files: ['js/<%= pkg.name %>.js'],
-    			tasks: ['uglify']
-  			}
+			}
 		}	
 
 	});
-	grunt.registerTask('default', ['stylus','watch','uglify']);
+	grunt.registerTask('default', ['stylus','watch','uglify','copy']);
 }
