@@ -1,6 +1,6 @@
 * 
   margin 0px 
-  padding 0 
+  padding 0px 
 
 html 
   background $hardbg
@@ -13,69 +13,44 @@ html
   
 nav 
   fixed top 100%
+  li
+    wh 50px 50px
+    margin 10px
+    display inline-block
+    transition all .3s
+    .github 
+      background-color transparent
+      background-image url("../img/git.png")
+      background-repeat no-repeat
+      background-position 50% 50%
+      background-size cover
+      float right
+    .twitter 
+      background-image url("../img/bird.png")
+      background-repeat no-repeat
+      background-position center center
+      background-size cover
+      float left
+    .discuss 
+      background-image url("../img/talk.png")
+      background-repeat no-repeat
+      background-position center center
+      background-size cover
+      float left
+      @media only screen and (max-width : 600px)
+        display none 
+    .usage 
+      color transparent
+      background-size cover
+      absolute left 50%
+      margin-left -25px
+      z-index 1000  
+    &:hover 
+      cursor pointer
+      border-radius 50%
+      background-color $hover 
 
-.star
-  color rgb(156,255,0)
 
-li
-  wh 50px 50px
-  display inline-block
-  transition all .3s 
-  &:hover 
-    cursor pointer
-    border-radius 50%
-    background-color $hover 
-
-.github 
-  background-color transparent
-  background-image url("../img/git.png")
-  background-repeat no-repeat
-  background-position 50% 50%
-  background-size cover
-  float right
-
-.twitter 
-  background-image url("../img/bird.png")
-  background-repeat no-repeat
-  background-position center center
-  background-size cover
-  float left
-
-.discuss 
-  background-image url("../img/talk.png")
-  background-repeat no-repeat
-  background-position center center
-  background-size cover
-  float left 
-
-.nfo 
-  background-image url("../img/nfo.png")
-  background-repeat no-repeat
-  background-position center center
-  background-size cover
-  fixed bottom 0px left 50%
-  margin-left -25px 
-  
-.option
-  margin-top 30px
-  text-align center
-  color cyan
-  font-size .7em
-
-.usage 
-  color transparent
-  background-size cover
-  absolute left 50%
-  margin-left -25px
-  z-index 1000
-
-.how
-  z-index 1000
-  color transparent
-  fixed top 75px left 50%
-
-pre
-  background black
 
 .footer
   wh 100% 175px
@@ -83,39 +58,47 @@ pre
   fixed bottom -175px
   transition all .3s
   border-top 1px solid rgba(0,0,0,.25)
+  .nfo 
+    background-image url("../img/nfo.png")
+    background-repeat no-repeat
+    background-position center center
+    background-size cover
+    fixed bottom 0px left 50%
+    margin-left -25px
   p
     text-align center
     font-size .8em
+  .info
+    display inline-block
+    width 140px
+    border-left 1px solid cyan
+    border-right 1px solid cyan
+    .desc
+      padding-top 30px
+      width 580px
+      margin 0 auto
+      font-family Manksans, serif
+      color salmon
+      text-shadow 0 1px 0px rgba(0,0,0,.5)
+      font-size 1.25em
+      @media only screen and (max-width : 600px)
+        width 100%
+    .option
+      margin-top 30px
+      text-align center
+      color cyan
+      font-size .7em
 
-li.info
-  display inline-block
-  width 140px
-  border-left 1px solid cyan
-  border-right 1px solid cyan
-
-.desc
-  padding-top 30px
-  width 580px
-  margin 0 auto
-  font-family Manksans, serif
-  color salmon
-  text-shadow 0 1px 0px rgba(0,0,0,.5)
-  font-size 1.25em
-  @media only screen and (max-width : 600px)
-    width 100%
-
-.arrow 
-  width 0
-  height 0
-  border 19px solid
-  margin-left 6px
-  border-top-color black
-  transition all .3s
-  margin-top 18px
+.how
+  z-index 1000
+  color transparent
+  fixed top 75px left 50%
+  .reveal
+    display none
+    relative right 50%
+  pre
+    background black
   
-.reveal
-  display none
-  relative right 50%
 
 .talk 
   transition all .5s
@@ -124,31 +107,27 @@ li.info
   fixed top 0px left -500px
   wh 400px 100%
   padding 0px 50px 50px 50px
-
-#disqus_thread 
-  wh 400px 100%
-  padding-bottom 100px
-  overflow-y auto 
-
-.close 
-  margin 10px
-  wh 50px 50px
-  display inline-block
-  opacity .35
-  transition all .3s
-  background url("../img/close.png") no-repeat center center
-  background-size cover
-  float right
-  relative top 0px right -50px 
-  &:hover 
-    opacity 1
-    cursor pointer
-
-.container 
-  wh 100% 100% 
-
-.mCustomScrollBox 
-  width 430px 
+  .container 
+    wh 100% 100% 
+  .mCustomScrollBox 
+    width 430px
+  #disqus_thread 
+    wh 400px 100%
+    padding-bottom 100px
+    overflow-y auto 
+  .close 
+    margin 10px
+    wh 50px 50px
+    display inline-block
+    opacity .35
+    transition all .3s
+    background url("../img/close.png") no-repeat center center
+    background-size cover
+    float right
+    relative top 0px right -50px 
+    &:hover 
+      opacity 1
+      cursor pointer 
   
 .twitbot
   margin-top 10px
@@ -157,6 +136,14 @@ li.info
     margin-left 10px
     p
       width 100%
-li.buttons.discuss
-  @media only screen and (max-width : 600px)
-    display none 
+
+.star
+  color rgb(156,255,0)
+.arrow 
+  width 0
+  height 0
+  border 19px solid
+  margin-left 6px
+  border-top-color black
+  transition all .3s
+  margin-top 18px
