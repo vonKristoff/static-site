@@ -4,7 +4,7 @@
 *
 * @author Jean-Christophe Nicolas <mrjcnicolas@gmail.com>
 * @homepage http://bite-software.co.uk/$plugin/
-* @version 1.0.0
+* @version 0.1.0
 * @license MIT http://opensource.org/licenses/MIT
 * @date 22-05-2013
 */

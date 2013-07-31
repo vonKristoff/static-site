@@ -8,10 +8,10 @@
         "effect",
         "jquery"
     ],
-    "version": "1.0.0",
+    "version": "0.1.0",
     "author": {
         "name": "vonKristoff",
-        "url": "http://atomicircus.org"
+        "url": "http://bite-software.co.uk"
     },
     "licenses": [
         {
