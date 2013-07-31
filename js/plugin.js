@@ -1,6 +1,6 @@
 /**
-* $custom jQuery plug-in
-* Text Colour Truffle Shuffle
+* $plugin jQuery plug-in
+* Description
 *
 * @author Jean-Christophe Nicolas <mrjcnicolas@gmail.com>
 * @homepage http://bite-software.co.uk/$plugin/
@@ -17,7 +17,10 @@ $.fn.program_name = function(options){
 	
 		process = new Plugin(me,options);
 
-	window.addEventListener( 'resize', process.resize, false );
+	// window.addEventListener( 'resize', process.resize, false );
+	window.onscroll = function(){
+		process.scroller()
+	}
 			
 	return this.el;	
 }
@@ -39,10 +42,47 @@ var Plugin = function(me,options){
 Plugin.prototype.init = function(){
 
 }
-
+Plugin.prototype.onscroll = function(){
+	console.log(this);
+}
 Plugin.prototype.resize = function(){
+	// this comes out as window .. not plugin
+}
+
+Plugin.prototype.rgbise = function(rgb){
+
+	var r = rgb[0],
+		g = rgb[1],
+		b = rgb[2];
+
+	var str = 'rgb(';
+
+	str += r + ',';
+	str += g + ',';
+	str += b + ')';
+
+	return str;
 
 }
+
+Plugin.prototype.rgbaise = function(rgb){
+
+	var r = rgb[0],
+		g = rgb[1],
+		b = rgb[2],
+		a = rgb[3];
+
+	var str = 'rgba(';
+
+	str += r + ',';
+	str += g + ',';
+	str += b + ',';
+	str += a + ')';
+
+	return str;
+
+}
+
 
 Plugin.prototype.hsl = function(rgb){
 
