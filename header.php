@@ -16,10 +16,10 @@
 <body>
 <nav>
   <ul>
-    <a href="http://twitter.com/vonKristoff"><li title='twitter' class='twitter'></li></a>
-    <a href="http://github.com/vonKristoff/<?php echo $repro ?>"><li title='download' class='github'></li></a>
-    <li title='comments' class='discuss'></li>
-    <li title='usage' class='usage'><div class="arrow"></div></li>
+    <a href="http://twitter.com/vonKristoff"><li title='twitter' class='flat twitter'></li></a>
+    <a href="http://github.com/vonKristoff/<?php echo $repro ?>"><li title='download' class='flat github'></li></a>
+    <li title='comments' class='flat discuss'></li>
+    <li title='usage' class='flat usage'><div class="arrow"></div></li>
   </ul>
 </nav>
 

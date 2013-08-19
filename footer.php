@@ -11,7 +11,7 @@
   </div>
 </div>
 <div id="disqus_thread"></div>
-<ul><li title='info' class='nfo'></li></ul>
+<ul><li title='info' class='flat nfo'></li></ul>
 <div class="footer">
     <div class="desc">
         <p><?php echo $description ?></p>
@@ -46,13 +46,8 @@
 <script src="js/mousewheel.min.js"></script>
 <script src="js/scrollbar.min.js"></script>
 <script src="js/controls.js"></script>
-<script>
-(function($) {
+<script src="js/init.js"></script>
 
-    // $('.element').plugin();
-
-})(jQuery);
-</script>
 <script>
   // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
