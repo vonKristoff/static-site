@@ -5,6 +5,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('assemble');
 
 	grunt.initConfig({
 		pkg     : grunt.file.readJSON('package.json'),
@@ -45,8 +46,21 @@ module.exports = function(grunt) {
 				tasks: ['copy','uglify'],
 				options:{ livereload: true }
 			}
+		},
+		assemble: {
+			readme:{
+				options: {
+					flatten: true,
+					partials: '',
+					data: 'package.json',
+					ext: '.md'
+				},
+				src:  'template.hbs',
+				dest: './distribution/<%= pkg.name %>.jquery.json'
+			}
 		}	
 
 	});
-	grunt.registerTask('default', ['stylus','watch','uglify','copy']);
+	grunt.registerTask('default', ['stylus','watch']);
+	grunt.registerTask('build', ['uglify','copy','assemble']);
 }

@@ -15,7 +15,7 @@
 <div class="footer">
     <div class="desc">
         <p><?php echo $description ?></p>
-        <a href="https://twitter.com/share" class="twitter-share-button twitbot" data-url="http://bite-software.co.uk/<?php echo $repro ?>" data-text="<?php echo $title ?> Check out this site" data-via="vonKristoff">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button twitbot" data-url="http://bite-software.co.uk/<?php echo $repro ?>" data-text="<?php echo $title ?> <?php echo $tweet ?>" data-via="vonKristoff">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <p>This shiv is <span class="star">FREE</span> - so if u like it - pls leave a <span class="star">comment</span> or <span class="star">star</span> my github repro etc.</p>
         <div class="option">
@@ -40,7 +40,7 @@
 // })();
 </script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="js/prism.js" data-default-language="markup"></script>
 <script src="js/<?php echo $repro ?>.js"></script>
 <script src="js/mousewheel.min.js"></script>
@@ -54,7 +54,7 @@
   // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  // ga('create', 'UA-40858550-3', 'bite-software.co.uk');
+  // ga('create', 'UA-40858550-<?php echo $analytics ?>', 'bite-software.co.uk');
   // ga('send', 'pageview');
 
 </script>

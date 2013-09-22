@@ -3,9 +3,12 @@
 
 $title 			='HOME';
 $description 	='';
-$repro 			='Shards';
+$repro 			='shards';
 $disqus 		='jquery-jumble';
-$usage 			='$(".class");';
+$analytics		='11';
+$tweet			='Check out this site';
+
+$usage 			='$(".class");';,
 
 /* Dont forget Google analytics */
 /* edit package.json with project name for gruntfile access

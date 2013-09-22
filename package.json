@@ -6,6 +6,11 @@
     "grunt-contrib-stylus": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-copy": "latest"
+    "grunt-contrib-copy": "latest",
+    "assemble":"latest"
+  },
+  "md":{
+  	"title":"the descy title",
+    "description":"a little more bull"
   }
 }

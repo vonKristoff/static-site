@@ -6,7 +6,7 @@
 * @homepage http://bite-software.co.uk/$plugin/
 * @version 0.1.0
 * @license MIT http://opensource.org/licenses/MIT
-* @date 22-05-2013
+* @date ~mddate
 */
 (function($) {
 
@@ -15,9 +15,11 @@ $.fn.program_name = function(options){
 	var el = $(this),
 		mobile = isMobile.any(),	
 	
-		process = new Plugin(me,options);
+		process = new Plugin(el,options);
 
-	// window.addEventListener( 'resize', process.resize, false );
+	window.onresize = function(){
+		process.resize()
+	}
 	window.onscroll = function(){
 		process.scroller()
 	}
@@ -27,14 +29,13 @@ $.fn.program_name = function(options){
 
 var Plugin = function(me,options){
 
-	var config = {	
+	this.config = {	
 		effect: 'slideToggle',
 		speed: 500 
 	}
-	$.extend(config,options);
+	$.extend(this.config,options);
 
 	this.el = me;
-	this.something = config.value;
 	
 	this.init();
 }
@@ -46,7 +47,7 @@ Plugin.prototype.onscroll = function(){
 	console.log(this);
 }
 Plugin.prototype.resize = function(){
-	// this comes out as window .. not plugin
+	
 }
 
 Plugin.prototype.rgbise = function(rgb){
