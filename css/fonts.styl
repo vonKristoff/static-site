@@ -7,6 +7,7 @@ $font4path = "walkway/walkway"
 $font5path = "krungthep/krungthep"
 $font6path = "antonio/antonio"
 $font7path = "ayita/ayita"
+$font8path = "proxima/Proxima"
 
 $font1 = $ip + $font1path
 $font2 = $ip + $font2path
@@ -15,6 +16,7 @@ $font4 = $ip + $font4path
 $font5 = $ip + $font5path
 $font6 = $ip + $font6path
 $font7 = $ip + $font7path
+$font8 = $ip + $font8path
 
 @font-face 
 	font-family Avenir
@@ -60,6 +62,13 @@ $font7 = $ip + $font7path
 
 @font-face 
 	font-family Ayita
+	src url($font7+'.eot')
+	src url($font7+'.svg#avenir') format('svg'), url($font7+'.ttf') format('truetype'), url($font7+'.woff') format('woff')
+	font-weight normal
+	font-style normal
+
+@font-face 
+	font-family Proxima
 	src url($font7+'.eot')
 	src url($font7+'.svg#avenir') format('svg'), url($font7+'.ttf') format('truetype'), url($font7+'.woff') format('woff')
 	font-weight normal
